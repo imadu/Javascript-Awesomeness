@@ -1,3 +1,9 @@
+var firstname = document.getElementById("firstname").value;
+var lastname = document.getElementById("lastname").value;
+var state = document.getElementById("state").value;
+var age = document.getElementById("age").value;
+var nationality = document.getElementById("nationality").value;
+
 function Details (firstname, lastname, state, age, nationality){
 	this.firstname = firstname;
 	this.lastname = lastname;
@@ -18,6 +24,10 @@ Details.prototype.displayDetails = function() {
 var getDetails = new Details(firstname, lastname, state, age, nationality);
 
 function result() {
+	console.log("hello world");
+
 	return getDetails.displayDetails();
+
 }
+
 
