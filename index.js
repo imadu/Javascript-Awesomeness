@@ -1,8 +1,3 @@
-var firstname = document.getElementById("firstname").value;
-var lastname = document.getElementById("lastname").value;
-var state = document.getElementById("state").value;
-var age = document.getElementById("age").value;
-var nationality = document.getElementById("nationality").value;
 
 function Details (firstname, lastname, state, age, nationality){
 	this.firstname = firstname;
@@ -21,7 +16,7 @@ Details.prototype.displayDetails = function() {
 };
 
 
-var getDetails = new Details(firstname, lastname, state, age, nationality);
+var getDetails = new Details("ik", "madu", "Abia", "24", "nigerian");
 
 function result() {
 	console.log("hello world");

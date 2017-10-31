@@ -6,7 +6,7 @@ function returnAnagram(str){
 	var anagram = [];
 
 	for (var i = 0; i < str.length; i++) {
-		var n = [0];
+		var n = str[0];
 		var _new = returnAnagram(str.slice(1, str.length));
 	for (var j = 0; j < _new.length; j++) {
 		anagram.push(n + _new[j]);
