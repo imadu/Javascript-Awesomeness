@@ -13,17 +13,14 @@ for (let i = 0; i < listItems.length; i++) {
 }
 
 //click the close button to hide the content
-var close = document.getElementsByClassName("close");
-
-for (let i = 0; i < close.length; i++) {
-	close[i].onclick = function(){
-		var div = this.parentElement;
-		div.style.display = "none";
-	}
-}
+var close = document.querySelector("ul");
+	close.addEventListener('click', function(e){
+		(e.target.nodeName.toUpperCase() == 'SPAN') && (e.target.parentElement.remove());
+		
+	});
 
 
-var list =document.querySelector('ul');
+var list = document.querySelector('ul');
 list.addEventListener('click', function(ev){
 	if (ev.target.tagName === 'LI') {
 		ev.target.classList.toggle('checked');
@@ -51,10 +48,5 @@ function addNewElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
+  
 } 
