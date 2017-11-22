@@ -1,12 +1,18 @@
-function randomGenerator (str) {
-	if (str.length < 5 || str.length >= 20){							
-		return "sorry the string can't be used for a password"
+function randomGenerator(n){
+
+	var possibleCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+	var password = [];
+	for (var i = 0; i < n; i++) {
+		
+		var rand = Math.floor(Math.random()*possibleCharacters.length);
+		var randomChar = possibleCharacters[rand];
+
+		 password.push(randomChar);
+
+		
 	}
+	
+	return password.toString().replace(/\,/g,"");
 
-	var randomString = Math.random().toString(36).slice(-8);
 
-
-	return "your passowrd is " + randomString;
- 
 }
-
