@@ -3,7 +3,9 @@ function factorial(n){
 		throw new Error("cannot generate factorial for numbers greater than 18");
 	} else if(n < 0){
 		throw new Error('n must be positive');
-	}else if (typeof(n) !== 'number') {
+	}else if (n === 0) {
+        return 1;
+    }else if (typeof(n) !== 'number') {
 		throw new Error ('input cannot be any other type than a number');
 	} else if (n % 1 !== 0) {
 		throw new Error('n cannot have decimals');
